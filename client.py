@@ -14,7 +14,7 @@ def getMethod():
 def postMethod():
 	f = open(fileName)
 	fileData = f.read()
-	client.send('POST ' + '\n' + fileData )
+	client.send('POST ' + '\n\n' + fileData )
 	pass
 
 while 1:

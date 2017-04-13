@@ -1,0 +1,67 @@
+%There is a new water park in town
+%We go there on the first day of summer
+%It has pools and water slides
+%There are sprinklers too.
+%The slides are scary at first.
+%After the first ride, we love the water slides
+%The sprinklers are cool on hot days. 
+%One of the pools makes its own waves.
+%All the kids try to surf the waves.
+%It is really fun.
+
+evt1(i,is).
+evt2(i,go).
+evt3(i,has).
+evt4(i,are).
+evt5(i,are).
+evt6(i,love).
+evt7(i,are).
+evt8(i,makes).
+evt9(i,try_to_surf).
+evt10(i,is).
+
+
+
+thm1(i,water_park).
+thm3(i,p).
+thm4(i,sprinklers).
+thm5(i,scary).
+thm6(i,the_water_slides).
+thm7(i,w).
+thm8(i,own_waves).
+thm9(i,the_waves).
+thm10(i,really_fun).
+
+
+mod1(water_park,new).
+mod3(p,pools).
+mod3(p,water_slides).
+mod7(w,cool).
+
+
+agt1(i,there).
+agt2(i,we).
+agt3(i,it).
+agt4(i,there).
+agt5(i,the_slides).
+agt6(i,we).
+agt7(i,the_sprinklers).
+agt8(i,one_of_the_pools).
+agt9(i,all_the_kids).
+agt10(i,it).
+
+
+
+loc1(i,town).
+loc2(i,there).
+
+
+
+time2(i,first_day_of_summer).
+time5(i,at_first).
+time6(i,after_the_first_ride).
+time7(i,hot_days).
+
+
+
+
