@@ -128,6 +128,15 @@ def handlePOST(conn,received,addr):
 
 	pass		
 
+def handlePUT(conn,received,addr):
+	try:
+	   	p = re.search('Content-Type: app.*\S(.*)-')
+		data = p.group(1)
+		print data
+	except:
+		pass
+
+
 class CreateThread(threading.Thread):
 	def __init__(self,conn,addr):
 		threading.Thread.__init__(self)
@@ -144,6 +153,8 @@ class CreateThread(threading.Thread):
 				handleGET(conn,received,addr)
 			elif method == "POST":
 				conn.send('HTTP/1.1 200 OK\r\n\r\n')
+			elif method == "PUT":
+				handlePUT(conn,received,addr)
 				# handlePOST(conn,received,addr)
 			conn.close()
 			break

@@ -8,13 +8,20 @@ fileName = sys.argv[3]
 
 def getMethod():
 	client.send('GET /' + fileName + ' HTTP/1.1')
-	print client.recv(2048)
+	print client.recv(4096)
 
 
 def postMethod():
 	f = open(fileName)
 	fileData = f.read()
 	client.send('POST ' + '\n\n' + fileData )
+	pass
+
+def putMethod():
+	print "put"
+	f = open(fileName)
+	fileData = f.read()
+	client.send('PUT ' + fileName + '\n\n' + fileData )
 	pass
 
 while 1:
@@ -26,5 +33,7 @@ while 1:
 		getMethod()
 	elif method == "POST":
 		postMethod()
+	elif method == "PUT":
+		putMethod()
 	client.close()
 
